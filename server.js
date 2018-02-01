@@ -11,7 +11,7 @@ const app = express()
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 app.use(cors())
-app.use(morgan())
+app.use(morgan('combined'))
 
 app.use('/api/login', login(express))
 app.use('/api/user', user(express))
